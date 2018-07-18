@@ -53,6 +53,12 @@ public class WelcomeActivity extends BaseActivity {
     }
 
     @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        showLoading();
+    }
+    @Override
     public void bindView(View view, Bundle savedInstanceState) {
         //StatusBarUtil.setTranslucentForImageView(this, 0, flAd);
         final GifDrawable gifDrawable = (GifDrawable) gifImageView.getDrawable();
